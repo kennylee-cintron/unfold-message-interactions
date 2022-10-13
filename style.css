@@ -1,0 +1,74 @@
+:root {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+main div {
+  display: inline-block;
+}
+main div:first-child {
+  font-size: 5rem;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main div:nth-child(2) {
+  background: steelblue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -100%);
+}
+main div:nth-child(3) {
+  background: yellow;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+}
+main div:nth-child(4) {
+  background: dimgray;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(100%, -100%);
+}
+main div:nth-child(5) {
+  background: rosybrown;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+main div:nth-child(2),
+main div:nth-child(3),
+main div:nth-child(4),
+main div:nth-child(5) {
+  width: 200px;
+  height: 200px;
+}
+/* Animation */
+/* main:hover ~ main div:nth-child(2):hover {
+  left: 20%;
+} */
+.boxes {
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+main:hover div:nth-child(2) {
+  transform: translate(-200%, -100%) rotate(90deg);
+}
+main:hover div:nth-child(3) {
+  transform: translate(-100%) rotate(-90deg);
+}
+main:hover div:nth-child(4) {
+  transform: translate(200%, -100%) rotate(-90deg);
+}
+main:hover div:nth-child(5) {
+  transform: translate(100%) rotate(90deg);
+}
